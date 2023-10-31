@@ -53,7 +53,7 @@ class TestVarasto(unittest.TestCase):
         self.assertEqual(self.varasto.saldo, saldo)
 
     def test_lisaa_enemman_kuin_mahtuu(self):
-        self.varasto.lisaa_varastoon(self.varasto.tilavuus+10)
+        self.varasto.lisaa_varastoon(self.varasto.tilavuus-10)
         self.assertEqual(self.varasto.saldo, self.varasto.tilavuus)
 
     def test_ota_negatiivinen_varastosta(self):
